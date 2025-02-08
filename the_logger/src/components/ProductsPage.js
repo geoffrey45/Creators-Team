@@ -8,8 +8,9 @@ function ProductPage() {
     return <ProductComponent key={item.model} item={item} />;
   });
   return (
-    <div className='text-centers'>Products Page
-      <div className="flex flex-row justify-between  w-[80%] mx-auto ">
+    <div className='text-centers'>
+      <h1 className="text-center mt-[20px]">Products Page</h1>
+      <div className="flex flex-row justify-between flex-wrap gap-y-[20px] w-[90%] mx-auto ">
         {myElements}
       </div>
     </div>

@@ -2,64 +2,43 @@ function About()
 {
     return (
         <div>
-            <section class="hero">
-                <h1>About TechGear</h1>
-                <p>Your Trusted Source for Premium Laptop Accessories</p>
-            </section>
-
-        <section class="about-content">
-            <div class="mission">
-                <h2>Our Mission</h2>
-                <p>At TechGear, we're committed to providing high-quality laptop accessories and electronics to enhance your computing experience. With years of expertise in the industry, we ensure that every product meets our stringent quality standards.</p>
-            </div>
-
-            <div class="features">
-                <div class="feature-card">
-                    <i class="fas fa-laptop"></i>
-                    <h3>Premium Products</h3>
-                    <p>Curated selection of top-tier laptops and accessories from leading brands.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-plug"></i>
-                    <h3>Genuine Accessories</h3>
-                    <p>Authentic laptop chargers and peripherals with warranty coverage.</p>
-                </div>
-                <div class="feature-card">
-                    <i class="fas fa-headset"></i>
-                    <h3>Expert Support</h3>
-                    <p>Dedicated technical support team to assist with your queries.</p>
-                </div>
-            </div>
-
-            <div class="why-choose-us">
-                <h2>Why Choose Us?</h2>
-                <ul>
-                    <li>Wide selection of laptop accessories</li>
-                    <li>Competitive pricing</li>
-                    <li>Fast shipping nationwide</li>
-                    <li>Secure payment options</li>
-                    <li>30-day return policy</li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="team">
-            <h2>Our Team</h2>
-            <div class="team-grid">
-                <div class="team-member">
-                    <h3>John Smith</h3>
-                    <p>Founder & CEO</p>
-                </div>
-                <div class="team-member">
-                    <h3>Sarah Johnson</h3>
-                    <p>Technical Director</p>
-                </div>
-                <div class="team-member">
-                    <h3>Mike Wilson</h3>
-                    <p>Customer Support Lead</p>
-                </div>
-            </div>
-        </section>
+            <div className="bg-gray-100 min-h-screen py-12 px-6">
+      <section className="container mx-auto text-center">
+        <h1 className="text-4xl font-bold text-blue-600">About TechGear</h1>
+        <p className="mt-4 text-lg text-gray-700 max-w-2xl mx-auto">
+          At TechGear, we are passionate about providing high-performance laptops for all your needs. 
+          Whether you are a professional, gamer, or student, we offer top-quality products that blend power, style, and reliability.
+        </p>
+      </section>
+      
+      {/* Our Mission */}
+      <section className="container mx-auto mt-12">
+        <h2 className="text-3xl font-semibold text-center mb-6">Our Mission</h2>
+        <p className="text-gray-700 text-center max-w-3xl mx-auto">
+          Our mission is to deliver cutting-edge laptops that empower individuals and businesses to achieve their goals. 
+          We prioritize innovation, customer satisfaction, and affordability, ensuring that every user gets the best computing experience.
+        </p>
+      </section>
+      
+      {/* Why Choose Us */}
+      <section className="container mx-auto mt-12">
+        <h2 className="text-3xl font-semibold text-center mb-6">Why Choose TechGear?</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="p-4 shadow-lg rounded-lg bg-white text-center">
+            <h3 className="text-xl font-bold">Top-Quality Products</h3>
+            <p className="text-gray-600">We offer only the best laptops from top brands, ensuring performance and durability.</p>
+          </div>
+          <div className="p-4 shadow-lg rounded-lg bg-white text-center">
+            <h3 className="text-xl font-bold">Affordable Pricing</h3>
+            <p className="text-gray-600">We provide competitive prices and great deals to make technology accessible to everyone.</p>
+          </div>
+          <div className="p-4 shadow-lg rounded-lg bg-white text-center">
+            <h3 className="text-xl font-bold">Customer Satisfaction</h3>
+            <p className="text-gray-600">Our dedicated support team ensures a seamless shopping experience from start to finish.</p>
+          </div>
+        </div>
+      </section>
+      </div>
         </div>
     )
 }
