@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 function Register(){
     const [formData, setFormData] = useState({ username: "", password: "" });
     const [message, setMessage] = useState("");
-    // const navigate = useNavigate();-
+    const navigate = useNavigate();
 
     function handleChange(e) {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -16,7 +16,7 @@ function Register(){
         try {
             const res = await axios.post("http://localhost:5000/register", formData);
             setMessage("Registration successful! Redirecting to login...");
-            // setTimeout(() => navigate("/login"), 2000); // Redirect to login after 2 seconds
+            setTimeout(() => navigate("login"), 2000); // Redirect to login after 2 seconds
         } catch (error) {
             setMessage("User already exists or registration failed.");
         }

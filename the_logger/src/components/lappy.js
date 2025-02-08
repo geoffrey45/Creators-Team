@@ -84,7 +84,7 @@ export const laptops = [
   },
   model: "2023",
   img: "https://tse2.mm.bing.net/th?id=OIP.jQDiZWDMHCGT-vEDvL4RqAHaEc&w=284&h=284&c=7"
-}
+},
   ];
   
 
