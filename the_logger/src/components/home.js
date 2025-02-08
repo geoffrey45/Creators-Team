@@ -3,7 +3,7 @@ function Home()
     return (
         <div>
             {/* Featured Laptops */}
-            <img src="https://wallpaper.dog/large/10855443.jpg" alt="laptop image" />
+            <img src="https://wallpaper.dog/large/10855443.jpg" alt="laptop" />
             <section className="container mx-auto py-12 px-6">
                     <h2 className="text-3xl font-semibold text-center mb-8">Featured Laptops</h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
