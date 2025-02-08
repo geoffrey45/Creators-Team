@@ -1,10 +1,3 @@
-import img1 from  "../images/dot-bg.png"
-import img2 from "../images/choose6.jpeg"
-import img3 from "../images/offer-1.jpeg"
-import img4 from "../images/offer-2.jpeg";
-import img5 from "../images/offer-3.jpeg";
-import img6 from "../images/offer-4.jpeg";
-import img7 from "../images/offer-5.jpeg";
 function Home()
 {
     return (

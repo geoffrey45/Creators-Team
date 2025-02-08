@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-const Profile = () => {
+function Profile(){
     const [userData, setUserData] = useState(null);
 
     useEffect(() => {

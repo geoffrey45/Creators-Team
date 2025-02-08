@@ -9,6 +9,7 @@ import About from './about';
 import ProductPage from './ProductsPage';
 import Home from './home';
 import ProductsInformation from './productsInformation';
+import Profile from './profile';
 function LandingPage() {
   return (
     <main>
@@ -22,6 +23,7 @@ function LandingPage() {
                 <Route path="register" element={<Register />} />
                 <Route path="login" element={<LoginPage />} />
                 <Route path="/product/:id" element={<ProductsInformation/>} />
+                <Route path="/profile" element={<Profile/>}/>
                 <Route path="*" element={<h1>Not Found</h1>} />
             </Route>
         </Routes>

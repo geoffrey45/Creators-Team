@@ -1,5 +1,6 @@
 import { laptops } from "./lappy";
 import { useParams } from "react-router-dom";
+import 'intasend-inlinejs-sdk';
 function ProductsInformation()
 {
     const { id } = useParams();
@@ -11,6 +12,13 @@ function ProductsInformation()
     }
     const {processor, ram, storage, display} = laptop.specs;
 
+    new window.IntaSend({
+        publicAPIKey: "ISPubKey_test_bd5803d9-755f-4df7-96a2-41343a52d85c",
+        live: false
+    })
+        .on("COMPLETE", (response) => {console.log("COMPLETE: ", response)})
+        .on("FAILED", (response) => {console.log("FAILED: ", response)})
+        .on("IN-PROGRESS", () => {console.log("IN-PROGRESS...")})
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-100">
             <div className="bg-white p-6 rounded-lg shadow-md w-96">
@@ -22,7 +30,7 @@ function ProductsInformation()
                     <li><strong>Storage:</strong> {storage}</li>
                     <li><strong>Display:</strong> {display}</li>
                 </ul>
-                <button className="mt-4 w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-300">
+                <button className="mt-4 w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-300" data-amount="28" data-currency="KES">
                     Buy Product
                 </button>
             </div>

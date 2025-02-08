@@ -10,6 +10,10 @@ app.use(cors());
 
 const users = []; // Temporary storage for users
 
+const secret = process.env.JWT_SECRET;
+console.log(secret);
+
+
 // Register Route
 app.post("/register", async (req, res) => {
     const { username, password } = req.body;
@@ -28,6 +32,8 @@ app.post("/register", async (req, res) => {
 // Login Route
 app.post("/login", async (req, res) => {
     const { username, password } = req.body;
+
+    // Find user correctly
     const user = users.find(user => user.username === username);
     
     if (!user) return res.status(400).json({ message: "User not found" });
@@ -37,7 +43,8 @@ app.post("/login", async (req, res) => {
     if (!isPasswordValid) return res.status(400).json({ message: "Invalid credentials" });
 
     // Generate JWT Token
-    const token = jwt.sign({ username }, process.env.JWT_SECRET, { expiresIn: "1h" });
+    const token = jwt.sign({ username }, secret, { expiresIn: "1h" });
+
     res.json({ token });
 });
 

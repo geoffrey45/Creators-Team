@@ -16,7 +16,7 @@ function Register(){
         try {
             const res = await axios.post("http://localhost:5000/register", formData);
             setMessage("Registration successful! Redirecting to login...");
-            setTimeout(() => navigate("login"), 2000); // Redirect to login after 2 seconds
+            setTimeout(() => navigate("/login"), 2000); // Redirect to login after 2 seconds
         } catch (error) {
             setMessage("User already exists or registration failed.");
         }
